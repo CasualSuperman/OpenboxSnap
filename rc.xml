@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_config xmlns="http://openbox.org/3.5/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <keyboard>
+    <keybind key="W-Up">
+      <action name="ToggleMaximize" />
+    </keybind>
+    <keybind key="W-Down">
+      <action name="If">
+        <iconified>no</iconified>
+        <then>
+          <action name="Iconify" />
+        </then>
+      </action>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="If">
+        <maximized>yes</maximized>
+        <then>
+          <action name="ToggleMaximize">
+            <direction>horizontal</direction>
+          </action>
+          <action name="MoveResizeTo">
+            <x>0</x>
+            <width>50%</width>
+          </action>
+        </then>
+        <else>
+          <action name="ToggleMaximize">
+            <direction>vertical</direction>
+          </action>
+          <action name="If">
+            <maximizedvertical>yes</maximizedvertical>
+            <then>
+              <action name="MoveResizeTo">
+                <x>0</x>
+                <width>50%</width>
+              </action>
+              <action name="ResizeRelative">
+                <right>-1</right>
+              </action>
+            </then>
+            <else>
+              <action name="MoveResizeTo">
+                <x>center</x>
+                <y>center</y>
+              </action>
+            </else>
+          </action>
+        </else>
+      </action>
+    </keybind>
+    <keybind key="W-Right">
+      <action name="If">
+        <maximized>yes</maximized>
+        <then>
+          <action name="ToggleMaximize">
+            <direction>horizontal</direction>
+          </action>
+          <action name="MoveResizeTo">
+            <x>-0</x>
+            <width>50%</width>
+          </action>
+        </then>
+        <else>
+          <action name="ToggleMaximize">
+            <direction>vertical</direction>
+          </action>
+          <action name="If">
+            <maximizedvertical>yes</maximizedvertical>
+            <then>
+              <action name="MoveResizeTo">
+                <x>-0</x>
+                <width>50%</width>
+              </action>
+              <action name="ResizeRelative">
+                <left>-1</left>
+              </action>
+            </then>
+            <else>
+              <action name="MoveResizeTo">
+                <x>center</x>
+                <y>center</y>
+              </action>
+            </else>
+          </action>
+        </else>
+      </action>
+    </keybind>
+  </keyboard>
+</openbox_config>
