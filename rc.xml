@@ -4,6 +4,11 @@
     <keybind key="W-Up">
       <action name="ToggleMaximize" />
     </keybind>
+    <keybind key="W-S-Up">
+      <action name="ToggleMaximize">
+        <direction>vertical</direction>
+      </action>
+    </keybind>
     <keybind key="W-Down">
       <action name="If">
         <maximized>no</maximized>
