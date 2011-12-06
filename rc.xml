@@ -6,10 +6,13 @@
     </keybind>
     <keybind key="W-Down">
       <action name="If">
-        <iconified>no</iconified>
+        <maximized>no</maximized>
         <then>
           <action name="Iconify" />
         </then>
+        <else>
+          <action name="ToggleMaximize" />
+        </else>
       </action>
     </keybind>
     <keybind key="W-Left">
