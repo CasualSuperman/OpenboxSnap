@@ -2,7 +2,7 @@
 <openbox_config xmlns="http://openbox.org/3.5/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <keyboard>
     <keybind key="W-Up">
-      <action name="ToggleMaximize" />
+      <action name="Maximize" />
     </keybind>
     <keybind key="W-S-Up">
       <action name="ToggleMaximize">
